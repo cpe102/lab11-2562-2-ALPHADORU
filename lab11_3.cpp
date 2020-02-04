@@ -1,5 +1,4 @@
 #include<iostream>
-
 using namespace std;
 
 void mySwap (int &,int &); //Pass variables by references
@@ -11,13 +10,12 @@ int main(){
 	mySwap (x,y);
 	cout << "After swapping:\n";
 	cout << "x = " << x << ", y = " << y << "\n";
-	
 	return 0;
 }
 
 //Write function definition here
-/*
-??? mySwap (???){
-
+void mySwap (int &x,int &y){
+	int a=x;
+	x = y;
+	y = a;
 }
-*/

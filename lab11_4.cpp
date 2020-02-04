@@ -1,9 +1,10 @@
 #include<iostream>
 #include<string>
-
 using namespace std;
 
 //Declare prototype of function template mySwap() here
+template <typename T>
+void mySwap(T &,T &);
 
 
 int main(){
@@ -11,6 +12,7 @@ int main(){
 	int x = 6, y = 9;
 	cout << "Before swapping:\n";
 	cout << "x = " << x << ", y = " << y << "\n";
+	
 	mySwap(x,y);
 	cout << "After swapping:\n";
 	cout << "x = " << x << ", y = " << y << "\n";
@@ -34,6 +36,10 @@ int main(){
 	return 0;
 }
 
-
 //Write definition of function template mySwap() here
-
+template <typename currentType>
+void mySwap(currentType &t,currentType &r){
+	currentType g = r;
+	r=t;
+	t=g;
+}
